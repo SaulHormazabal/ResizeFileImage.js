@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Resizefileimage.js : Resize images with JavaScript." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Resizefileimage.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/sahch/ResizeFileImage.js">View on GitHub</a>
+
+          <h1 id="project_title">Resizefileimage.js</h1>
+          <h2 id="project_tagline">Resize images with JavaScript.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/sahch/ResizeFileImage.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/sahch/ResizeFileImage.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>ResizeFileImage.js</h1>
+
+<p>Resize images with JavaScript.</p>
+
+<h2>Parameters</h2>
+
+<pre><code>ResizeFileImage ( source, callback, width, height, format );
+</code></pre>
+
+<h2>Sources</h2>
+
+<p>Resize images from diferents sources.</p>
+
+<h3>input tag</h3>
+
+<pre><code>&lt;input id="input_image_to_resize" type="file"&gt;
+&lt;script&gt;
+    var source = document.getElementById('input_image_to_resize');
+&lt;/script&gt;
+</code></pre>
+
+<h3>img tag</h3>
+
+<pre><code>&lt;img id="img_image_to_resize" src="image_to_resize.jpg"&gt;
+&lt;script&gt;
+    var source = document.getElementById('img_image_to_resize');
+&lt;/script&gt;
+</code></pre>
+
+<h3>JQuery Selector</h3>
+
+<pre><code>&lt;script&gt;
+    var source = $('#image_to_resize');
+&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>if selector return more than one, only resized the first element.</li>
+</ul><h3>String</h3>
+
+<pre><code>&lt;script&gt;
+    var source = 'img/image_to_resize.jpg';
+&lt;/script&gt;
+</code></pre>
+
+<h2>Format</h2>
+
+<p>Default format image/png</p>
+
+<h3>Options</h3>
+
+<ul>
+<li>'image/png'</li>
+<li>'image/jpg'</li>
+</ul><h2>Basic usage</h2>
+
+<p>source from input tag and de image resized loaded in img tag.</p>
+
+<pre><code>&lt;img id="image_resized"&gt;
+&lt;script&gt;
+    ResizeFileImage ( 
+        source, 
+        function(data){
+            var img = document.getElementById('image_resized');
+            img.src = data;
+        },
+        100, 
+        100
+    );
+&lt;/script&gt;
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Resizefileimage.js maintained by <a href="https://github.com/sahch">sahch</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
